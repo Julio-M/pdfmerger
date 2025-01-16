@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger - Merge Your PDFs Online</title>
+    <meta name="description" content="Merge your PDF files online easily with our PDF Merger. No data is stored.">
+    <meta name="keywords" content="PDF, merge, online, PDF merger, open-source">
+    <meta property="og:title" content="PDF Merger - Merge Your PDFs Online">
+    <meta property="og:description"
+        content="Merge your PDF files online easily with the PDF Merger. No data is stored.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>PDF Merger</h1>
+    <form id="uploadForm">
+        <input type="file" id="files" name="files" multiple accept="application/pdf">
+        <ul id="fileList"></ul>
+        <button type="submit">Merge PDFs</button>
+    </form>
+    <div id="result"></div>
+    <div id="disclaimer">
+        <p>This is just a fun open-source project. Everything runs on the client side, and no data gets stored
+            anywhere—so go ahead, do your thing! You can check the source code <a href="https://github.com/Julio-M"
+                target="_blank" style="color: rgb(163, 134, 134);">here</a>.</p>
+    </div>
+    <div id="footer">
+        <p>&copy; <span id="year"></span> Xhulio Mihali</p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</body>
+
+</html>
