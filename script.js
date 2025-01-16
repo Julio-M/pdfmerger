@@ -7,8 +7,13 @@ function updateFileList() {
   fileList.innerHTML = "";
   const files = Array.from(fileInput.files);
   files.forEach((file, index) => {
+    if (file.type !== "application/pdf") {
+      alert("Only PDF files are allowed.");
+      return;
+    }
     const li = document.createElement("li");
-    li.textContent = file.name;
+    // Sanitize file name
+    li.textContent = file.name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     li.draggable = true;
     li.dataset.index = index;
     fileList.appendChild(li);
